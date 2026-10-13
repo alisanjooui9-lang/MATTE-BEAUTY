@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171717">
+<meta name="description" content="MATTE BEAUTY | فروشگاه آنلاین لوازم آرایشی">
+<title>MATTE BEAUTY | فروشگاه زیبایی</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --black:#171717;
+  --black2:#222222;
+  --white:#ffffff;
+  --background:#f6f6f4;
+  --muted:#777777;
+  --border:#e9e9e7;
+  --gold:#b89b68;
+  --danger:#c94343;
+  --radius:18px;
+  --shadow:0 8px 30px rgba(0,0,0,.055);
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+body {
+  font-family:'Vazirmatn',Tahoma,sans-serif;
+  background:var(--background);
+  color:var(--black);
+  line-height:1.8;
+}
+
+button,input,select,textarea {
+  font:inherit;
+}
+
+button {
+  cursor:pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+img {
+  max-width:100%;
+}
+
+.container {
+  width:min(1240px,92%);
+  margin:auto;
+}
+
+.hidden {
+  display:none!important;
+}
+
+/* نوار اطلاع‌رسانی */
+
+.topbar {
+  background:var(--black);
+  color:#fff;
+  text-align:center;
+  padding:8px 12px;
+  font-size:12px;
+  letter-spacing:.2px;
+}
+
+/* هدر */
+
+.header {
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-main {
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.logo {
+  display:flex;
+  flex-direction:column;
+  line-height:1.35;
+  flex-shrink:0;
+}
+
+.logo-en {
+  font-size:23px;
+  font-weight:900;
+  letter-spacing:1.6px;
+}
+
+.logo-fa {
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:2px;
+}
+
+.search-wrap {
+  flex:1;
+  max-width:470px;
+  position:relative;
+}
+
+.search-box {
+  display:flex;
+  align-items:center;
+  background:#f4f4f2;
+  border:1px solid transparent;
+  border-radius:12px;
+  padding:0 14px;
+  height:47px;
+  gap:10px;
+  transition:.2s;
+}
+
+.search-box:focus-within {
+  border-color:#aaa;
+  background:#fff;
+}
+
+.search-box input {
+  background:transparent;
+  border:0;
+  outline:0;
+  width:100%;
+  min-width:0;
+  font-size:13px;
+}
+
+.search-icon {
+  font-size:20px;
+  color:#555;
+}
+
+.header-actions {
+  display:flex;
+  gap:9px;
+  align-items:center;
+}
+
+.icon-button {
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  min-height:43px;
+  padding:8px 12px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:12px;
+  white-space:nowrap;
+  transition:.2s;
+}
+
+.icon-button:hover {
+  background:var(--black);
+  color:#fff;
+}
+
+.cart-count {
+  background:var(--black);
+  color:#fff;
+  border-radius:50%;
+  width:22px;
+  height:22px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  font-size:11px;
+}
+
+/* منوی دسته‌بندی */
+
+.nav {
+  border-top:1px solid #f2f2f2;
+}
+
+.nav-inner {
+  display:flex;
+  align-items:center;
+  gap:27px;
+  min-height:47px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.nav-inner::-webkit-scrollbar {
+  display:none;
+}
+
+.nav a {
+  flex-shrink:0;
+  font-size:12px;
+  color:#444;
+  transition:.2s;
+}
+
+.nav a:hover {
+  color:var(--gold);
+}
+
+/* بنر اصلی */
+
+.hero {
+  padding:27px 0 18px;
+}
+
+.hero-card {
+  min-height:380px;
+  background:#1b1b1b;
+  color:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+}
+
+.hero-content {
+  padding:48px;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow {
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+.hero h1 {
+  font-size:clamp(29px,4vw,48px);
+  line-height:1.5;
+  font-weight:800;
+  margin-bottom:16px;
+}
+
+.hero h1 span {
+  color:#c4aa7d;
+}
+
+.hero p {
+  color:#c8c8c8;
+  font-size:13px;
+  line-height:2.3;
+  max-width:430px;
+  margin-bottom:27px;
+}
+
+.primary-button {
+  background:#fff;
+  color:#171717;
+  border:1px solid #fff;
+  border-radius:10px;
+  padding:12px 23px;
+  font-size:12px;
+  font-weight:700;
+  transition:.25s;
+}
+
+.primary-button:hover {
+  background:var(--gold);
+  border-color:var(--gold);
+  transform:translateY(-2px);
+}
+
+.hero-visual {
+  min-height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  background:
+    radial-gradient(ellipse at center,rgba(191,159,104,.19),transparent 60%);
+}
+
+.hero-visual img {
+  width:82%;
+  height:330px;
+  object-fit:cover;
+  border-radius:150px 150px 20px 20px;
+  filter:brightness(.86);
+}
+
+.hero-badge {
+  position:absolute;
+  bottom:35px;
+  right:20px;
+  background:#fff;
+  color:#171717;
+  padding:13px 17px;
+  border-radius:12px;
+  font-size:11px;
+  box-shadow:var(--shadow);
+}
+
+/* ویژگی‌های فروشگاه */
+
+.features {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  padding:18px 0 35px;
+}
+
+.feature {
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px 12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.feature-icon {
+  width:43px;
+  height:43px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f4f1ea;
+  border-radius:12px;
+  font-size:20px;
+  flex-shrink:0;
+}
+
+.feature strong {
+  display:block;
+  font-size:12px;
+}
+
+.feature span {
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* عنوان بخش‌ها */
+
+.section {
+  padding:24px 0 34px;
+}
+
+.section-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin-bottom:22px;
+}
+
+.section-heading h2 {
+  font-size:23px;
+  font-weight:800;
+}
+
+.section-heading p {
+  color:var(--muted);
+  font-size:12px;
+  margin-top:3px;
+}
+
+.section-link {
+  font-size:12px;
+  border-bottom:1px solid #aaa;
+  padding-bottom:3px;
+  white-space:nowrap;
+}
+
+/* دسته‌بندی‌ها */
+
+.category-grid {
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:14px;
+}
+
+.category-card {
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:17px;
+  padding:12px;
+  text-align:center;
+  transition:.25s;
+  cursor:pointer;
+}
+
+.category-card:hover {
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  border-color:#c6b38f;
+}
+
+.category-image {
+  height:125px;
+  border-radius:12px;
+  background:#f0efec;
+  overflow:hidden;
+  margin-bottom:11px;
+}
+
+.category-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.35s;
+}
+
+.category-card:hover img {
+  transform:scale(1.07);
+}
+
+.category-card strong {
+  font-size:12px;
+  display:block;
+}
+
+.category-card small {
+  font-size:10px;
+  color:var(--muted);
+}
+
+/* نوار پیشنهاد */
+
+.promo-strip {
+  background:#eae5dc;
+  border-radius:20px;
+  margin:12px 0 25px;
+  padding:24px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.promo-strip h3 {
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.promo-strip p {
+  font-size:12px;
+  color:#62605b;
+}
+
+.dark-button {
+  border:0;
+  border-radius:10px;
+  background:var(--black);
+  color:#fff;
+  padding:12px 20px;
+  font-size:12px;
+  white-space:nowrap;
+}
+
+.dark-button:hover {
+  background:#3a3a3a;
+}
+
+/* ابزارهای محصولات */
+
+.product-toolbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.filter-buttons {
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:2px;
+}
+
+.filter-button {
+  flex-shrink:0;
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:30px;
+  padding:8px 15px;
+  font-size:11px;
+  transition:.2s;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background:var(--black);
+  color:#fff;
+  border-color:var(--black);
+}
+
+.sort-select {
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:10px;
+  padding:9px;
+  font-size:11px;
+  max-width:150px;
+}
+
+/* کارت محصولات */
+
+.product-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+
+.product-card {
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:17px;
+  overflow:hidden;
+  transition:.25s;
+  position:relative;
+}
+
+.product-card:hover {
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.product-image {
+  height:235px;
+  background:#f2f1ee;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.product-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s;
+}
+
+.product-card:hover .product-image img {
+  transform:scale(1.055);
+}
+
+.product-tag {
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:var(--black);
+  color:#fff;
+  padding:5px 9px;
+  border-radius:7px;
+  font-size:9px;
+  z-index:1;
+}
+
+.product-tag.sale {
+  background:#b73b3b;
+}
+
+.product-info {
+  padding:15px;
+}
+
+.product-brand {
+  color:#999;
+  font-size:10px;
+  margin-bottom:4px;
+}
+
+.product-name {
+  font-size:13px;
+  font-weight:700;
+  line-height:1.9;
+  min-height:48px;
+  cursor:pointer;
+}
+
+.product-name:hover {
+  color:#997a48;
+}
+
+.product-description {
+  color:var(--muted);
+  font-size:10px;
+  margin-top:3px;
+  min-height:35px;
+}
+
+.product-bottom {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:14px;
+}
+
+.product-price {
+  font-weight:800;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.product-price small {
+  font-size:9px;
+  font-weight:400;
+}
+
+.old-price {
+  display:block;
+  color:#999;
+  font-size:10px;
+  text-decoration:line-through;
+  font-weight:400;
+}
+
+.add-button {
+  background:var(--black);
+  color:#fff;
+  border:0;
+  border-radius:9px;
+  width:39px;
+  height:39px;
+  font-size:21px;
+  flex-shrink:0;
+  transition:.2s;
+}
+
+.add-button:hover {
+  background:var(--gold);
+  color:#111;
+}
+
+.stock-text {
+  color:#568261;
+  font-size:10px;
+  margin-top:8px;
+}
+
+.out-of-stock {
+  color:var(--danger);
+}
+
+.empty-state {
+  grid-column:1/-1;
+  text-align:center;
+  background:#fff;
+  padding:50px 20px;
+  border-radius:15px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* جست‌وجوی هوشمند */
+
+.ai-section {
+  padding:35px 0;
+}
+
+.ai-card {
+  background:#202020;
+  color:#fff;
+  border-radius:22px;
+  padding:35px;
+  position:relative;
+  overflow:hidden;
+}
+
+.ai-card::after {
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:rgba(183,155,105,.12);
+  left:-90px;
+  top:-100px;
+  pointer-events:none;
+}
+
+.ai-header {
+  position:relative;
+  z-index:1;
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.ai-icon {
+  width:54px;
+  height:54px;
+  border:1px solid #656565;
+  border-radius:17px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  margin:0 auto 12px;
+}
+
+.ai-header h2 {
+  font-size:23px;
+  margin-bottom:7px;
+}
+
+.ai-header p {
+  color:#c3c3c3;
+  font-size:12px;
+}
+
+.ai-search {
+  max-width:720px;
+  margin:auto;
+  position:relative;
+  z-index:1;
+}
+
+.ai-input-row {
+  display:flex;
+  gap:10px;
+  padding:7px;
+  background:#fff;
+  border-radius:13px;
+}
+
+.ai-input-row input {
+  border:0;
+  outline:0;
+  padding:10px;
+  width:100%;
+  min-width:0;
+  font-size:12px;
+  color:#171717;
+}
+
+.ai-input-row button {
+  background:var(--black);
+  color:#fff;
+  border:0;
+  border-radius:9px;
+  padding:10px 19px;
+  white-space:nowrap;
+  font-size:12px;
+}
+
+.ai-examples {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:9px;
+  margin-top:17px;
+}
+
+.ai-example {
+  background:transparent;
+  color:#ddd;
+  border:1px solid #555;
+  border-radius:25px;
+  padding:7px 12px;
+  font-size:10px;
+}
+
+.ai-example:hover {
+  background:#fff;
+  color:#171717;
+}
+
+.ai-response {
+  display:none;
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  margin:25px auto 0;
+  background:#fff;
+  color:#222;
+  border-radius:13px;
+  padding:20px;
+}
+
+.ai-response.show {
+  display:block;
+}
+
+.ai-response h3 {
+  font-size:15px;
+  margin-bottom:7px;
+}
+
+.ai-response p {
+  color:#666;
+  font-size:12px;
+  margin-bottom:15px;
+}
+
+.ai-results {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.ai-result-item {
+  background:#f7f7f5;
+  padding:12px;
+  border-radius:10px;
+  font-size:11px;
+}
+
+.ai-result-item strong {
+  display:block;
+  margin-bottom:4px;
+}
+
+.ai-result-item span {
+  color:#666;
+}
+
+/* پیشنهادهای ویژه */
+
+.editorial {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+  margin:20px 0 35px;
+}
+
+.editorial-card {
+  min-height:220px;
+  border-radius:19px;
+  overflow:hidden;
+  position:relative;
+  background:#ddd;
+}
+
+.editorial-card img {
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.editorial-card:hover img {
+  transform:scale(1.04);
+}
+
+.editorial-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,.04));
+  display:flex;
+  flex-direction:column;
+  justify-content:end;
+  align-items:flex-start;
+  padding:25px;
+  color:#fff;
+}
+
+.editorial-overlay span {
+  color:#e4cc9f;
+  font-size:10px;
+  margin-bottom:5px;
+}
+
+.editorial-overlay h3 {
+  font-size:21px;
+  margin-bottom:8px;
+}
+
+.editorial-overlay p {
+  font-size:11px;
+  color:#ddd;
+}
+
+/* فرم خبرنامه */
+
+.newsletter {
+  background:#e9e6e0;
+  border-radius:20px;
+  padding:28px;
+  margin:25px 0 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.newsletter h3 {
+  font-size:19px;
+}
+
+.newsletter p {
+  font-size:11px;
+  color:#666;
+}
+
+.newsletter-form {
+  display:flex;
+  gap:8px;
+  width:min(430px,100%);
+}
+
+.newsletter-form input {
+  flex:1;
+  min-width:0;
+  border:1px solid #d8d5ce;
+  border-radius:9px;
+  background:#fff;
+  padding:11px;
+  font-size:11px;
+}
+
+.newsletter-form button {
+  background:var(--black);
+  color:#fff;
+  border:0;
+  border-radius:9px;
+  padding:10px 17px;
+  font-size:11px;
+}
+
+/* فوتر */
+
+.footer {
+  background:#171717;
+  color:#fff;
+  padding:45px 0 20px;
+  margin-top:30px;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:30px;
+}
+
+.footer-brand p {
+  color:#aaa;
+  font-size:11px;
+  line-height:2.5;
+  margin-top:14px;
+  max-width:290px;
+}
+
+.footer h4 {
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.footer-links {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer-links a {
+  color:#aaa;
+  font-size:11px;
+}
+
+.footer-links a:hover {
+  color:#fff;
+}
+
+.footer-bottom {
+  border-top:1px solid #383838;
+  margin-top:35px;
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  color:#999;
+  font-size:10px;
+}
+
+/* پنجره‌های شناور */
+
+.overlay {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:200;
+  opacity:0;
+  visibility:hidden;
+  transition:.25s;
+}
+
+.overlay.show {
+  opacity:1;
+  visibility:visible;
+}
+
+.drawer {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  width:min(450px,100%);
+  background:#fff;
+  z-index:210;
+  padding:25px;
+  overflow-y:auto;
+  transform:translateX(-100%);
+  transition:.3s;
+}
+
+.drawer.show {
+  transform:translateX(0);
+}
+
+.drawer-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:20px;
+}
+
+.drawer-header h2 {
+  font-size:20px;
+}
+
+.close-button {
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:9px;
+  width:37px;
+  height:37px;
+  font-size:19px;
+}
+
+.cart-items {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.cart-item {
+  display:grid;
+  grid-template-columns:75px 1fr;
+  gap:13px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--border);
+}
+
+.cart-item img {
+  width:75px;
+  height:90px;
+  object-fit:cover;
+  background:#eee;
+  border-radius:10px;
+}
+
+.cart-item h4 {
+  font-size:12px;
+  margin-bottom:5px;
+}
+
+.cart-item-price {
+  font-size:12px;
+  font-weight:700;
+}
+
+.quantity-control {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:8px;
+}
+
+.quantity-control button {
+  width:27px;
+  height:27px;
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:7px;
+}
+
+.remove-item {
+  border:0!important;
+  color:var(--danger);
+  background:transparent!important;
+  font-size:10px;
+}
+
+.cart-empty {
+  text-align:center;
+  padding:45px 15px;
+  color:#777;
+  font-size:13px;
+}
+
+.cart-total {
+  border-top:1px solid var(--border);
+  margin-top:25px;
+  padding-top:18px;
+}
+
+.total-line {
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.total-line.final {
+  font-weight:800;
+  font-size:16px;
+}
+
+.full-button {
+  width:100%;
+  background:var(--black);
+  color:#fff;
+  border:0;
+  border-radius:10px;
+  padding:14px;
+  font-size:12px;
+  margin-top:10px;
+}
+
+.full-button:hover {
+  background:#333;
+}
+
+.secondary-button {
+  width:100%;
+  background:#fff;
+  color:#222;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px;
+  font-size:12px;
+  margin-top:8px;
+}
+
+/* پنجره عمومی */
+
+.modal-wrap {
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:300;
+  background:rgba(0,0,0,.6);
+  opacity:0;
+  visibility:hidden;
+  transition:.2s;
+}
+
+.modal-wrap.show {
+  opacity:1;
+  visibility:visible;
+}
+
+.modal {
+  background:#fff;
+  width:min(650px,100%);
+  max-height:90vh;
+  overflow-y:auto;
+  border-radius:18px;
+  padding:25px;
+  transform:translateY(15px);
+  transition:.2s;
+}
+
+.modal-wrap.show .modal {
+  transform:translateY(0);
+}
+
+.modal-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:22px;
+  gap:10px;
+}
+
+.modal-heading h2 {
+  font-size:19px;
+}
+
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.form-field {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.form-field.full {
+  grid-column:1/-1;
+}
+
+.form-field label {
+  font-size:11px;
+  font-weight:600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width:100%;
+  padding:11px;
+  border:1px solid #dededb;
+  border-radius:9px;
+  background:#fff;
+  outline:none;
+  font-size:12px;
+}
+
+.form-field textarea {
+  min-height:90px;
+  resize:vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color:#888;
+}
+
+.form-note {
+  background:#f5f4f1;
+  color:#555;
+  border-radius:9px;
+  padding:12px;
+  font-size:11px;
+  margin:15px 0;
+}
+
+.form-error {
+  color:var(--danger);
+  font-size:11px;
+  margin-top:9px;
+}
+
+/* صفحه جزئیات محصول */
+
+.detail-layout {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.detail-image {
+  background:#f1f0ed;
+  border-radius:14px;
+  overflow:hidden;
+  min-height:260px;
+}
+
+.detail-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.detail-info h2 {
+  font-size:21px;
+  line-height:1.8;
+  margin:6px 0 12px;
+}
+
+.detail-info p {
+  color:#777;
+  font-size:12px;
+  line-height:2.2;
+  margin:12px 0;
+}
+
+.detail-price {
+  font-size:20px;
+  font-weight:800;
+  margin:15px 0;
+}
+
+/* پنل مدیریت */
+
+.admin-layout {
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:20px;
+}
+
+.admin-sidebar {
+  background:#202020;
+  color:#fff;
+  border-radius:14px;
+  padding:16px 10px;
+  height:max-content;
+}
+
+.admin-sidebar button {
+  display:block;
+  width:100%;
+  text-align:right;
+  border:0;
+  border-radius:8px;
+  background:transparent;
+  color:#ddd;
+  padding:12px 10px;
+  font-size:11px;
+  margin-bottom:5px;
+}
+
+.admin-sidebar button.active,
+.admin-sidebar button:hover {
+  background:#3b3b3b;
+  color:#fff;
+}
+
+.admin-content {
+  min-width:0;
+}
+
+.admin-panel {
+  display:none;
+}
+
+.admin-panel.active {
+  display:block;
+}
+
+.admin-stats {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.stat-card {
+  background:#f6f5f2;
+  border-radius:12px;
+  padding:17px;
+}
+
+.stat-card span {
+  display:block;
+  font-size:10px;
+  color:#777;
+}
+
+.stat-card strong {
+  display:block;
+  font-size:22px;
+  margin-top:7px;
+}
+
+.admin-table-wrap {
+  overflow-x:auto;
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+
+.admin-table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:580px;
+  font-size:11px;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align:right;
+  padding:12px;
+  border-bottom:1px solid var(--border);
+}
+
+.admin-table th {
+  background:#f4f4f1;
+  font-weight:700;
+}
+
+.admin-table tr:last-child td {
+  border-bottom:0;
+}
+
+.table-actions {
+  display:flex;
+  gap:6px;
+}
+
+.small-button {
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:7px;
+  padding:6px 9px;
+  font-size:10px;
+}
+
+.small-button.danger {
+  color:var(--danger);
+}
+
+.admin-toolbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.admin-toolbar h3 {
+  font-size:16px;
+}
+
+.admin-toolbar button {
+  border:0;
+  border-radius:9px;
+  background:var(--black);
+  color:#fff;
+  padding:10px 14px;
+  font-size:11px;
+}
+
+.admin-status {
+  display:inline-block;
+  border-radius:6px;
+  padding:4px 7px;
+  background:#eee;
+  font-size:10px;
+}
+
+.status-new {
+  background:#e9f2e9;
+  color:#367444;
+}
+
+.status-shipped {
+  background:#e7eef9;
+  color:#375c91;
+}
+
+.status-delivered {
+  background:#f1eadc;
+  color:#866a34;
+}
+
+/* صفحه ورود مدیر */
+
+.admin-login {
+  max-width:420px;
+  margin:15px auto;
+  background:#f8f7f4;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px;
+}
+
+.admin-login h3 {
+  font-size:17px;
+  margin-bottom:8px;
+}
+
+.admin-login p {
+  color:#777;
+  font-size:11px;
+  margin-bottom:18px;
+}
+
+/* اعلان */
+
+.toast-container {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:500;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  max-width:calc(100% - 40px);
+}
+
+.toast {
+  background:#202020;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  font-size:12px;
+  animation:toastIn .25s ease;
+}
+
+@keyframes toastIn {
+  from {
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity:0;transform:translateY(8px)}
+  to {opacity:1;transform:translateY(0)}
+}
+
+.product-card {
+  animation:fadeIn .35s ease both;
+}
+
+/* حالت موبایل */
+
+@media(max-width:1000px) {
+  .category-grid {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .product-grid {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .product-image {
+    height:220px;
+  }
+
+  .features {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero-content {
+    padding:30px;
+  }
+
+  .footer-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:700px) {
+  .container {
+    width:94%;
+  }
+
+  .header-main {
+    min-height:auto;
+    padding:13px 0;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  .logo-en {
+    font-size:19px;
+  }
+
+  .search-wrap {
+    order:3;
+    flex-basis:100%;
+    max-width:none;
+  }
+
+  .header-actions {
+    margin-right:auto;
+  }
+
+  .icon-button {
+    min-height:39px;
+    padding:6px 9px;
+  }
+
+  .nav-inner {
+    gap:20px;
+    min-height:43px;
+  }
+
+  .hero {
+    padding-top:15px;
+  }
+
+  .hero-card {
+    grid-template-columns:1fr;
+    min-height:0;
+    border-radius:17px;
+  }
+
+  .hero-content {
+    padding:30px 23px 10px;
+  }
+
+  .hero h1 {
+    font-size:29px;
+  }
+
+  .hero p {
+    font-size:12px;
+  }
+
+  .hero-visual {
+    min-height:220px;
+  }
+
+  .hero-visual img {
+    width:65%;
+    height:200px;
+  }
+
+  .hero-badge {
+    bottom:20px;
+    right:15px;
+    padding:9px 12px;
+  }
+
+  .features {
+    gap:9px;
+    padding-bottom:22px;
+  }
+
+  .feature {
+    padding:12px 8px;
+    gap:8px;
+  }
+
+  .feature-icon {
+    width:35px;
+    height:35px;
+    font-size:16px;
+  }
+
+  .feature strong {
+    font-size:10px;
+  }
+
+  .feature span {
+    font-size:9px;
+  }
+
+  .section {
+    padding:19px 0 25px;
+  }
+
+  .section-heading h2 {
+    font-size:19px;
+  }
+
+  .section-heading p {
+    font-size:10px;
+  }
+
+  .category-grid {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:9px;
+  }
+
+  .category-card {
+    padding:7px;
+    border-radius:12px;
+  }
+
+  .category-image {
+    height:105px;
+  }
+
+  .category-card strong {
+    font-size:10px;
+  }
+
+  .category-card small {
+    font-size:9px;
+  }
+
+  .promo-strip {
+    padding:20px 15px;
+    gap:10px;
+  }
+
+  .promo-strip h3 {
+    font-size:15px;
+  }
+
+  .promo-strip p {
+    font-size:10px;
+  }
+
+  .dark-button {
+    padding:10px 12px;
+    font-size:10px;
+  }
+
+  .product-toolbar {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .filter-buttons {
+    width:100%;
+  }
+
+  .sort-select {
+    max-width:100%;
+  }
+
+  .product-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+
+  .product-image {
+    height:180px;
+  }
+
+  .product-info {
+    padding:10px;
+  }
+
+  .product-name {
+    font-size:11px;
+    min-height:42px;
+  }
+
+  .product-description {
+    font-size:9px;
+  }
+
+  .product-price {
+    font-size:11px;
+  }
+
+  .add-button {
+    width:34px;
+    height:34px;
+  }
+
+  .ai-card {
+    padding:25px 14px;
+    border-radius:16px;
+  }
+
+  .ai-header h2 {
+    font-size:19px;
+  }
+
+  .ai-header p {
+    font-size:11px;
+  }
+
+  .ai-input-row {
+    gap:4px;
+  }
+
+  .ai-input-row input {
+    font-size:11px;
+    padding:8px 5px;
+  }
+
+  .ai-input-row button {
+    padding:9px 12px;
+    font-size:10px;
+  }
+
+  .ai-results {
+    grid-template-columns:1fr;
+  }
+
+  .editorial {
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .editorial-card {
+    min-height:210px;
+  }
+
+  .newsletter {
+    padding:20px 15px;
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .newsletter-form {
+    width:100%;
+  }
+
+  .footer-grid {
+    grid-template-columns:1fr 1fr;
+    gap:25px 15px;
+  }
+
+  .footer-brand {
+    grid-column:1/-1;
+  }
+
+  .footer-bottom {
+    font-size:9px;
+  }
+
+  .form-grid {
+    grid-template-columns:1fr;
+  }
+
+  .form-field.full {
+    grid-column:auto;
+  }
+
+  .detail-layout {
+    grid-template-columns:1fr;
+  }
+
+  .detail-image {
+    height:270px;
+  }
+
+  .admin-layout {
+    grid-template-columns:1fr;
+  }
+
+  .admin-sidebar {
+    display:flex;
+    overflow-x:auto;
+    gap:5px;
+  }
+
+  .admin-sidebar button {
+    width:auto;
+    white-space:nowrap;
+    flex-shrink:0;
+    margin:0;
+  }
+
+  .admin-stats {
+    grid-template-columns:1fr 1fr;
+  }
+
+  .modal {
+    padding:17px;
+  }
+}
+
+@media(max-width:370px) {
+  .product-image {
+    height:150px;
+  }
+
+  .logo-en {
+    font-size:16px;
+  }
+
+  .icon-button {
+    font-size:10px;
+    padding:6px;
+  }
+
+  .category-image {
+    height:85px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  تجربه‌ای متفاوت از زیبایی | MATTE BEAUTY
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="header-main">
+
+      <a href="#" class="logo" aria-label="صفحه اصلی مت بیوتی">
+        <span class="logo-en">MATTE BEAUTY</span>
+        <span class="logo-fa">BEAUTY • SKIN • CARE</span>
+      </a>
+
+      <div class="search-wrap">
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input
+            type="search"
+            id="mainSearch"
+            placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..."
+            aria-label="جست‌وجوی محصولات"
+          >
+          <button
+            id="clearSearch"
+            class="hidden"
+            style="border:0;background:transparent"
+            aria-label="پاک کردن جست‌وجو"
+          >×</button>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-button" id="accountButton">
+          ♙ <span>حساب کاربری</span>
+        </button>
+
+        <button class="icon-button" id="cartButton">
+          🛍 <span>سبد خرید</span>
+          <span class="cart-count" id="cartCount">۰</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#categories">دسته‌بندی محصولات</a>
+        <a href="#products">همه محصولات</a>
+        <a href="#ai">جست‌وجوی هوشمند</a>
+        <a href="#special">پیشنهادهای ویژه</a>
+        <a href="#footer">درباره فروشگاه</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- صفحه اصلی -->
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-card">
+
+        <div class="hero-content">
+          <div class="eyebrow">BEAUTY STARTS HERE</div>
+
+          <h1>
+            زیبایی تو،
+            <br>
+            <span>انتخاب توست.</span>
+          </h1>
+
+          <p>
+            دنیایی از محصولات آرایشی و مراقبتی با انتخابی هوشمندانه،
+            تجربه خریدی ساده و طراحی متفاوت.
+          </p>
+
+          <a href="#products">
+            <button class="primary-button">مشاهده محصولات ←</button>
+          </a>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85"
+            alt="محصولات آرایشی"
+          >
+
+          <div class="hero-badge">
+            انتخابی برای زیبایی روزمره
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ویژگی‌ها -->
+
+  <section class="container">
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">✦</div>
+        <div>
+          <strong>انتخاب آسان</strong>
+          <span>جست‌وجوی سریع محصولات</span>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">◇</div>
+        <div>
+          <strong>تنوع محصولات</strong>
+          <span>دسته‌بندی‌های متنوع</span>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⌂</div>
+        <div>
+          <strong>ثبت سفارش آسان</strong>
+          <span>فرایند خرید ساده</span>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">✧</div>
+        <div>
+          <strong>مشاور هوشمند</strong>
+          <span>پیشنهاد بر اساس نیاز شما</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- دسته‌بندی‌ها -->
+
+  <section class="section" id="categories">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <h2>دسته‌بندی محصولات</h2>
+          <p>محصول موردنظرت را راحت‌تر پیدا کن.</p>
+        </div>
+
+        <a href="#products" class="section-link">مشاهده همه ←</a>
+      </div>
+
+      <div class="category-grid">
+
+        <div class="category-card" data-category="آرایش صورت">
+          <div class="category-image">
+            <img
+              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=500&q=80"
+              alt="آرایش صورت"
+              loading="lazy"
+            >
+          </div>
+          <strong>آرایش صورت</strong>
+          <small>کرم پودر و پنکک</small>
+        </div>
+
+        <div class="category-card" data-category="آرایش چشم">
+          <div class="category-image">
+            <img
+              src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80"
+              alt="آرایش چشم"
+              loading="lazy"
+            >
+          </div>
+          <strong>آرایش چشم</strong>
+          <small>ریمل و خط چشم</small>
+        </div>
+
+        <div class="category-card" data-category="آرایش لب">
+          <div class="category-image">
+            <img
+              src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=500&q=80"
+              alt="آرایش لب"
+              loading="lazy"
+            >
+          </div>
+          <strong>آرایش لب</strong>
+          <small>رژ لب و بالم</small>
+        </div>
+
+        <div class="category-card" data-category="مراقبت پوست">
+          <div class="category-image">
+            <img
+              src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=500&q=80"
+              alt="مراقبت پوست"
+              loading="lazy"
+            >
+          </div>
+          <strong>مراقبت پوست</strong>
+          <small>کرم و مرطوب‌کننده</small>
+        </div>
+
+        <div class="category-card" data-category="مراقبت مو">
+          <div class="category-image">
+            <img
+              src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=500&q=80"
+              alt="مراقبت مو"
+              loading="lazy"
+            >
+          </div>
+          <strong>مراقبت مو</strong>
+          <small>شامپو و ماسک مو</small>
+        </div>
+
+        <div class="category-card" data-category="عطر">
+          <div class="category-image">
+            <img
+              src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=500&q=80"
+              alt="عطر"
+              loading="lazy"
+            >
+          </div>
+          <strong>عطر و خوشبوکننده</strong>
+          <small>رایحه‌های متنوع</small>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- پیشنهاد ویژه -->
+
+  <section class="container">
+    <div class="promo-strip">
+      <div>
+        <h3>انتخاب هوشمندانه‌تر، خرید آسان‌تر</h3>
+        <p>محصولات را بر اساس نیاز و بودجه‌ات جست‌وجو کن.</p>
+      </div>
+
+      <a href="#ai">
+        <button class="dark-button">شروع جست‌وجو ←</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- محصولات -->
+
+  <section class="section" id="products">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <h2 id="productsTitle">محصولات فروشگاه</h2>
+          <p id="productsSubtitle">محصولات آزمایشی MATTE BEAUTY</p>
+        </div>
+      </div>
+
+      <div class="product-toolbar">
+        <div class="filter-buttons" id="filterButtons">
+          <button class="filter-button active" data-filter="همه">همه محصولات</button>
+          <button class="filter-button" data-filter="آرایش صورت">آرایش صورت</button>
+          <button class="filter-button" data-filter="آرایش چشم">آرایش چشم</button>
+          <button class="filter-button" data-filter="آرایش لب">آرایش لب</button>
+          <button class="filter-button" data-filter="مراقبت پوست">مراقبت پوست</button>
+          <button class="filter-button" data-filter="مراقبت مو">مراقبت مو</button>
+          <button class="filter-button" data-filter="عطر">عطر</button>
+        </div>
+
+        <select id="sortProducts" class="sort-select" aria-label="مرتب‌سازی">
+          <option value="default">مرتب‌سازی پیش‌فرض</option>
+          <option value="low">ارزان‌ترین</option>
+          <option value="high">گران‌ترین</option>
+          <option value="discount">بیشترین تخفیف</option>
+          <option value="name">نام محصول</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <div class="empty-state">در حال آماده‌سازی محصولات...</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- جست‌وجوی هوشمند -->
+
+  <section class="ai-section" id="ai">
+    <div class="container">
+
+      <div class="ai-card">
+
+        <div class="ai-header">
+          <div class="ai-icon">✧</div>
+          <h2>مشاور هوشمند MATTE</h2>
+          <p>
+            نیازت را بنویس تا محصولات مرتبط را از فروشگاه پیدا کنیم.
+          </p>
+        </div>
+
+        <div class="ai-search">
+
+          <form id="aiSearchForm">
+            <div class="ai-input-row">
+              <input
+                type="text"
+                id="aiSearchInput"
+                placeholder="مثلاً رژ لب مات زیر ۳۰۰ هزار تومان..."
+                autocomplete="off"
+                required
+              >
+              <button type="submit">پیدا کن ←</button>
+            </div>
+          </form>
+
+          <div class="ai-examples">
+            <button class="ai-example" data-query="رژ لب مات">رژ لب مات</button>
+            <button class="ai-example" data-query="محصولات زیر ۳۰۰ هزار تومان">زیر ۳۰۰ هزار تومان</button>
+            <button class="ai-example" data-query="مراقبت پوست">مراقبت پوست</button>
+            <button class="ai-example" data-query="ارزان ترین محصول">ارزان‌ترین‌ها</button>
+            <button class="ai-example" data-query="محصولات تخفیف دار">تخفیف‌دارها</button>
+          </div>
+
+        </div>
+
+        <div class="ai-response" id="aiResponse" aria-live="polite">
+          <h3 id="aiResponseTitle">نتیجه جست‌وجو</h3>
+          <p id="aiResponseDescription"></p>
+          <div class="ai-results" id="aiResults"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- بنرهای تصویری -->
+
+  <section class="container" id="special">
+    <div class="editorial">
+
+      <a href="#products" class="editorial-card">
+        <img
+          src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80"
+          alt="محصولات آرایشی"
+          loading="lazy"
+        >
+        <div class="editorial-overlay">
+          <span>BEAUTY COLLECTION</span>
+          <h3>زیبایی در جزئیات است.</h3>
+          <p>محصولات آرایشی را بررسی کن.</p>
+        </div>
+      </a>
+
+      <a href="#ai" class="editorial-card">
+        <img
+          src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=900&q=80"
+          alt="محصولات مراقبتی"
+          loading="lazy"
+        >
+        <div class="editorial-overlay">
+          <span>SMART BEAUTY</span>
+          <h3>انتخابی متناسب با تو.</h3>
+          <p>از جست‌وجوی هوشمند کمک بگیر.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- خبرنامه آزمایشی -->
+
+  <section class="container">
+    <div class="newsletter">
+      <div>
+        <h3>از محصولات جدید باخبر شو.</h3>
+        <p>این بخش در نسخه آزمایشی است و ایمیل‌ها را ارسال نمی‌کند.</p>
+      </div>
+
+      <form class="newsletter-form" id="newsletterForm">
+        <input
+          type="email"
+          id="newsletterEmail"
+          placeholder="آدرس ایمیل شما"
+          required
+        >
+        <button type="submit">عضویت</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- فوتر -->
+
+<footer class="footer" id="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-en">MATTE BEAUTY</span>
+          <span class="logo-fa">BEAUTY • SKIN • CARE</span>
+        </a>
+
+        <p>
+          یک تجربه آزمایشی از فروشگاه اینترنتی لوازم آرایشی و مراقبتی،
+          با طراحی مینیمال و ابزار جست‌وجوی هوشمند.
+        </p>
+      </div>
+
+      <div>
+        <h4>دسترسی سریع</h4>
+        <div class="footer-links">
+          <a href="#home">صفحه اصلی</a>
+          <a href="#products">محصولات</a>
+          <a href="#categories">دسته‌بندی‌ها</a>
+          <a href="#ai">جست‌وجوی هوشمند</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>راهنمای خرید</h4>
+        <div class="footer-links">
+          <a href="#" id="footerAccount">حساب کاربری</a>
+          <a href="#" id="footerCart">سبد خرید</a>
+          <a href="#" id="footerOrders">پیگیری سفارش آزمایشی</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>درباره فروشگاه</h4>
+        <div class="footer-links">
+          <a href="#footer">درباره ما</a>
+          <a href="#footer">ارتباط با ما</a>
+          <a href="#footer">قوانین آزمایشی</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© MATTE BEAUTY — نسخه آزمایشی</span>
+      <span>این فروشگاه فعلاً پرداخت واقعی ندارد.</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- پس‌زمینه پنل سبد خرید -->
+
+<div class="overlay" id="drawerOverlay"></div>
+
+<!-- سبد خرید -->
+
+<aside class="drawer" id="cartDrawer" aria-label="سبد خرید">
+
+  <div class="drawer-header">
+    <h2>سبد خرید شما</h2>
+    <button class="close-button" id="closeCart" aria-label="بستن">×</button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-total" id="cartTotal">
+    <div class="total-line">
+      <span>جمع محصولات</span>
+      <strong id="subtotal">۰ تومان</strong>
+    </div>
+
+    <div class="total-line">
+      <span>هزینه ارسال</span>
+      <strong id="shippingCost">۰ تومان</strong>
+    </div>
+
+    <div class="total-line final">
+      <span>مبلغ نهایی</span>
+      <strong id="finalTotal">۰ تومان</strong>
+    </div>
+
+    <button class="full-button" id="checkoutButton">
+      ادامه و ثبت سفارش آزمایشی
+    </button>
+
+    <button class="secondary-button" id="continueShopping">
+      ادامه خرید
+    </button>
+  </div>
+
+</aside>
+
+<!-- پنجره جزئیات محصول -->
+
+<div class="modal-wrap" id="productModal">
+  <div class="modal">
+
+    <div class="modal-heading">
+      <h2>جزئیات محصول</h2>
+      <button class="close-button" data-close="productModal">×</button>
+    </div>
+
+    <div id="productDetails"></div>
+
+  </div>
+</div>
+
+<!-- پنجره ثبت سفارش -->
+
+<div class="modal-wrap" id="checkoutModal">
+  <div class="modal">
+
+    <div class="modal-heading">
+      <h2>اطلاعات ارسال سفارش</h2>
+      <button class="close-button" data-close="checkoutModal">×</button>
+    </div>
+
+    <div class="form-note">
+      این فرم فقط برای آزمایش است. پرداخت واقعی انجام نمی‌شود و اطلاعات کارت بانکی درخواست نمی‌شود.
+    </div>
+
+    <form id="checkoutForm">
+
+      <div class="form-grid">
+
+        <div class="form-field">
+          <label for="customerName">نام و نام خانوادگی گیرنده *</label>
+          <input
+            id="customerName"
+            name="customerName"
+            type="text"
+            required
+            maxlength="100"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="customerPhone">شماره موبایل *</label>
+          <input
+            id="customerPhone"
+            name="customerPhone"
+            type="tel"
+            inputmode="tel"
+            required
+            maxlength="15"
+            autocomplete="tel"
+            placeholder="مثلاً 09123456789"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="customerProvince">استان *</label>
+          <select id="customerProvince" name="province" required>
+            <option value="">انتخاب استان</option>
+            <option>تهران</option>
+            <option>البرز</option>
+            <option>اصفهان</option>
+            <option>فارس</option>
+            <option>خراسان رضوی</option>
+            <option>آذربایجان شرقی</option>
+            <option>آذربایجان غربی</option>
+            <option>گیلان</option>
+            <option>مازندران</option>
+            <option>قم</option>
+            <option>قزوین</option>
+            <option>یزد</option>
+            <option>کرمان</option>
+            <option>خوزستان</option>
+            <option>سایر استان‌ها</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="customerCity">شهر *</label>
+          <input
+            id="customerCity"
+            name="city"
+            type="text"
+            required
+            maxlength="80"
+            autocomplete="address-level2"
+          >
+        </div>
+
+        <div class="form-field full">
+          <label for="customerAddress">آدرس کامل *</label>
+          <textarea
+            id="customerAddress"
+            name="address"
+            required
+            maxlength="500"
+            autocomplete="street-address"
+            placeholder="خیابان، کوچه، پلاک و واحد"
+          ></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="customerPostal">کد پستی ۱۰ رقمی *</label>
+          <input
+            id="customerPostal"
+            name="postal"
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            required
+            autocomplete="postal-code"
+            placeholder="۱۰ رقم"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="customerNotes">توضیحات سفارش</label>
+          <input
+            id="customerNotes"
+            name="notes"
+            type="text"
+            maxlength="250"
+            placeholder="اختیاری"
+          >
+        </div>
+
+      </div>
+
+      <div class="form-note" id="checkoutSummary">
+        مبلغ سفارش: ۰ تومان
+      </div>
+
+      <button class="full-button" type="submit">
+        ثبت سفارش آزمایشی
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- حساب کاربری آزمایشی -->
+
+<div class="modal-wrap" id="accountModal">
+  <div class="modal">
+
+    <div class="modal-heading">
+      <h2>حساب کاربری</h2>
+      <button class="close-button" data-close="accountModal">×</button>
+    </div>
+
+    <div class="form-note">
+      این نسخه دمو است. حساب کاربری این بخش فقط روی همین مرورگر ذخیره می‌شود و ورود امن واقعی ندارد.
+    </div>
+
+    <form id="accountForm">
+
+      <div class="form-grid">
+
+        <div class="form-field full">
+          <label for="accountName">نام و نام خانوادگی</label>
+          <input
+            id="accountName"
+            type="text"
+            maxlength="100"
+            required
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-field full">
+          <label for="accountPhone">شماره موبایل</label>
+          <input
+            id="accountPhone"
+            type="tel"
+            maxlength="15"
+            required
+            autocomplete="tel"
+          >
+        </div>
+
+      </div>
+
+      <button class="full-button" type="submit">ذخیره اطلاعات آزمایشی</button>
+
+      <button class="secondary-button" type="button" id="logoutButton">
+        پاک کردن حساب آزمایشی
+      </button>
+
+    </form>
+
+    <div id="accountStatus" class="form-note hidden"></div>
+
+  </div>
+</div>
+
+<!-- پنل مدیریت -->
+
+<div class="modal-wrap" id="adminModal">
+  <div class="modal" style="width:min(1100px,100%)">
+
+    <div class="modal-heading">
+      <div>
+        <h2>پنل مدیریت MATTE BEAUTY</h2>
+        <p style="font-size:11px;color:#777">
+          مدیریت آزمایشی محصولات و سفارش‌ها
+        </p>
+      </div>
+
+      <button class="close-button" data-close="adminModal">×</button>
+    </div>
+
+    <div class="form-note">
+      هشدار: این پنل صرفاً برای نمایش است. رمز ثابت یا کنترل سمت مرورگر، امنیت واقعی ایجاد نمی‌کند. اطلاعات محرمانه یا سفارش واقعی در این نسخه نگهداری نکن.
+    </div>
+
+    <div id="adminLoginArea" class="admin-login">
+
+      <h3>ورود مدیر آزمایشی</h3>
+      <p>برای جلوگیری از نمایش تصادفی پنل، رمز دمو را وارد کن.</p>
+
+      <form id="adminLoginForm">
+
+        <div class="form-field">
+          <label for="adminPassword">رمز آزمایشی</label>
+          <input
+            id="adminPassword"
+            type="password"
+            required
+            autocomplete="current-password"
+            placeholder="رمز دمو"
+          >
+        </div>
+
+        <button class="full-button" type="submit">ورود به پنل</button>
+
+        <p style="margin-top:12px;font-size:10px;color:#999">
+          رمز نسخه نمایشی: demo123
+        </p>
+
+      </form>
+
+    </div>
+
+    <div id="adminDashboard" class="hidden">
+
+      <div class="admin-layout">
+
+        <aside class="admin-sidebar">
+
+          <button class="active" data-admin-tab="dashboardPanel">
+            ◫ داشبورد
+          </button>
+
+          <button data-admin-tab="productsPanel">
+            ▦ مدیریت محصولات
+          </button>
+
+          <button data-admin-tab="ordersPanel">
+            ▤ مدیریت سفارش‌ها
+          </button>
+
+          <button data-admin-tab="addProductPanel">
+            ＋ افزودن محصول
+          </button>
+
+          <button id="adminLogoutButton">
+            خروج از پنل
+          </button>
+
+        </aside>
+
+        <div class="admin-content">
+
+          <!-- داشبورد -->
+
+          <section class="admin-panel active" id="dashboardPanel">
+
+            <div class="admin-toolbar">
+              <h3>خلاصه فروشگاه</h3>
+            </div>
+
+            <div class="admin-stats">
+
+              <div class="stat-card">
+                <span>تعداد محصولات</span>
+                <strong id="statProducts">۰</strong>
+              </div>
+
+              <div class="stat-card">
+                <span>تعداد سفارش‌ها</span>
+                <strong id="statOrders">۰</strong>
+              </div>
+
+              <div class="stat-card">
+                <span>جمع سفارش‌های آزمایشی</span>
+                <strong id="statRevenue">۰</strong>
+              </div>
+
+            </div>
+
+            <div class="form-note">
+              آمار این قسمت از اطلاعات آزمایشی ذخیره‌شده در مرورگر محاسبه می‌شود.
+            </div>
+
+          </section>
+
+          <!-- مدیریت محصولات -->
+
+          <section class="admin-panel" id="productsPanel">
+
+            <div class="admin-toolbar">
+              <h3>محصولات</h3>
+
+              <button type="button" id="goAddProduct">
+                + افزودن محصول
+              </button>
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+
+                <thead>
+                  <tr>
+                    <th>نام محصول</th>
+                    <th>دسته‌بندی</th>
+                    <th>قیمت</th>
+                    <th>موجودی</th>
+                    <th>عملیات</th>
+                  </tr>
+                </thead>
+
+                <tbody id="adminProductsTable"></tbody>
+
+              </table>
+            </div>
+
+          </section>
+
+          <!-- سفارش‌ها -->
+
+          <section class="admin-panel" id="ordersPanel">
+
+            <div class="admin-toolbar">
+              <h3>سفارش‌های ثبت‌شده</h3>
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+
+                <thead>
+                  <tr>
+                    <th>شماره سفارش</th>
+                    <th>نام گیرنده</th>
+                    <th>مبلغ</th>
+                    <th>وضعیت</th>
+                    <th>عملیات</th>
+                  </tr>
+                </thead>
+
+                <tbody id="adminOrdersTable"></tbody>
+
+              </table>
+            </div>
+
+          </section>
+
+          <!-- افزودن محصول -->
+
+          <section class="admin-panel" id="addProductPanel">
+
+            <div class="admin-toolbar">
+              <h3 id="productFormTitle">افزودن محصول جدید</h3>
+            </div>
+
+            <form id="adminProductForm">
+
+              <input type="hidden" id="editProductId">
+
+              <div class="form-grid">
+
+                <div class="form-field">
+                  <label for="adminProductName">نام محصول *</label>
+                  <input
+                    id="adminProductName"
+                    required
+                    maxlength="120"
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="adminProductBrand">برند</label>
+                  <input
+                    id="adminProductBrand"
+                    maxlength="80"
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="adminProductCategory">دسته‌بندی *</label>
+                  <select id="adminProductCategory" required>
+                    <option value="آرایش صورت">آرایش صورت</option>
+                    <option value="آرایش چشم">آرایش چشم</option>
+                    <option value="آرایش لب">آرایش لب</option>
+                    <option value="مراقبت پوست">مراقبت پوست</option>
+                    <option value="مراقبت مو">مراقبت مو</option>
+                    <option value="عطر">عطر</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="adminProductPrice">قیمت به تومان *</label>
+                  <input
+                    id="adminProductPrice"
+                    type="number"
+                    min="0"
+                    max="100000000000"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="adminProductOldPrice">قیمت قبلی</label>
+                  <input
+                    id="adminProductOldPrice"
+                    type="number"
+                    min="0"
+                    max="100000000000"
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="adminProductStock">موجودی *</label>
+                  <input
+                    id="adminProductStock"
+                    type="number"
+                    min="0"
+                    max="1000000"
+                    required
+                    value="10"
+                  >
+                </div>
+
+                <div class="form-field full">
+                  <label for="adminProductImage">آدرس تصویر محصول</label>
+                  <input
+                    id="adminProductImage"
+                    type="url"
+                    placeholder="https://example.com/product.jpg"
+                  >
+                </div>
+
+                <div class="form-field full">
+                  <label for="adminProductDescription">توضیحات</label>
+                  <textarea
+                    id="adminProductDescription"
+                    maxlength="1000"
+                  ></textarea>
+                </div>
+
+              </div>
+
+              <button class="full-button" type="submit">
+                ذخیره محصول
+              </button>
+
+              <button
+                class="secondary-button"
+                type="button"
+                id="cancelEditProduct"
+              >
+                پاک کردن فرم
+              </button>
+
+            </form>
+
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- منطق فروشگاه در فایل جداگانه قرار می‌گیرد -->
+<script src="script.js"></script>
+
+</body>
+  </html>
